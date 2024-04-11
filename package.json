@@ -1,12 +1,9 @@
 {
-  "name": "pact-contract-creation",
-  "version": "1.0.0",
+  "name": "pact-contract-testing",
   "description": "Consumer contract creation",
-  "main": "index.js",
   "scripts": {
-    "test": "npx jest"
+    "test": "jest"
   },
-  "keywords": [],
   "author": "lodgify/qa-automation",
   "license": "ISC",
   "dependencies": {
@@ -14,5 +11,9 @@
   },
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
   }
 }

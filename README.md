@@ -6,15 +6,15 @@ Project for creating consumer contracts and publish them to lodgify's pact broke
 
 ```bash
     cd {PROJECT_ROOT}
-    npm install
+    pnpm install
 ```
 
 ## Run tests and create contracts
 
 ```bash
-    npm run test
+    pnpm test
 ```
 
 ## Tech Stack
 
-Node.js, Jest, Pact
+Node.js, Jest, Pact, PNPM
