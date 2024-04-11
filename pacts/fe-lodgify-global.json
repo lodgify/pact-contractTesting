@@ -1,0 +1,61 @@
+{
+  "consumer": {
+    "name": "fe"
+  },
+  "interactions": [
+    {
+      "description": "A request for linked features",
+      "providerStates": [
+        {
+          "name": "I need to get linked features for an account"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/account/linkedFeatures"
+      },
+      "response": {
+        "body": [
+          {
+            "accountId": 466151,
+            "features": []
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type",
+                  "min": 1
+                }
+              ]
+            }
+          },
+          "header": {},
+          "status": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "12.4.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.16",
+      "models": "1.1.19"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "lodgify-global"
+  }
+}
