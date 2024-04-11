@@ -1,6 +1,6 @@
 {
   "consumer": {
-    "name": "Lodgify app"
+    "name": "fe"
   },
   "interactions": [
     {
@@ -56,6 +56,6 @@
     }
   },
   "provider": {
-    "name": "Lodgify global"
+    "name": "lodgify-global"
   }
 }

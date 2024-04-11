@@ -9,8 +9,8 @@ const { eachLike } = MatchersV3;
 
 const provider = new PactV3({
   dir: path.resolve(process.cwd(), "pacts"),
-  consumer: "Lodgify app",
-  provider: "Lodgify global",
+  consumer: "fe",
+  provider: "lodgify-global",
   port: 9292,
   host: "127.0.0.1",
 });
