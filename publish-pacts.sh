@@ -9,5 +9,5 @@ docker run --rm \
  -e PACT_BROKER_BASE_URL \
   pactfoundation/pact-cli:latest \
   publish \
-  ${PWD}/pacts \
+  ${PWD}/contract-specs/fe/pacts \
   --consumer-app-version 1.0.0 \
