@@ -6,6 +6,14 @@
     {
       "description": "A request for linked features",
       "pending": false,
+      "providerStates": [
+        {
+          "name": "state",
+          "params": {
+            "property_owner_id": 466151
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "path": "/api/v1/account/linkedFeatures"

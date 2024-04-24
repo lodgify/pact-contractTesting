@@ -10,4 +10,4 @@ docker run --rm \
   pactfoundation/pact-cli:latest \
   publish \
   ${PWD}/contract-specs/fe/pacts \
-  --consumer-app-version 1.0.0 \
+  --consumer-app-version 1.0.2 \

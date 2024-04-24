@@ -2,8 +2,8 @@
  * @jest-environment node
  */
 
-const { PactV4 } = require("@pact-foundation/pact");
-const path = require("path");
+import { PactV4 } from "@pact-foundation/pact";
+import path from "path";
 
 const pact = new PactV4({
   dir: path.resolve(process.cwd(), "contract-specs/fe/pacts"),
@@ -17,6 +17,7 @@ describe("Pact Lodgify Consumer", () => {
       await pact
         .addInteraction()
         .uponReceiving("A request for linked features")
+        .given("state", { property_owner_id: 466151 })
         .withRequest("GET", "/api/v1/account/linkedFeatures")
         .willRespondWith(200, (builder) => {
           builder.jsonBody({
