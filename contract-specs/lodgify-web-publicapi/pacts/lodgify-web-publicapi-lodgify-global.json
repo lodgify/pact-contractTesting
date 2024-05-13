@@ -1,0 +1,80 @@
+{
+  "consumer": {
+    "name": "lodgify-web-publicapi"
+  },
+  "interactions": [
+    {
+      "description": "A request for a city",
+      "pending": false,
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/city/222"
+      },
+      "response": {
+        "body": {
+          "content": {
+            "countryId": 107,
+            "id": 222,
+            "isCountryCapital": false,
+            "isRegionCapital": false,
+            "latitude": 32.2666667,
+            "longitude": 49.0833333,
+            "name": "Chandār",
+            "population": 0,
+            "regionId": 2005
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "status": 200
+      },
+      "type": "Synchronous/HTTP"
+    },
+    {
+      "description": "A request for country name",
+      "pending": false,
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/country-name/22/en"
+      },
+      "response": {
+        "body": {
+          "content": {
+            "countryId": 22,
+            "language": "en",
+            "name": "Burkina Faso"
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "status": 200
+      },
+      "type": "Synchronous/HTTP"
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "12.4.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.16",
+      "models": "1.1.19"
+    },
+    "pactSpecification": {
+      "version": "4.0"
+    }
+  },
+  "provider": {
+    "name": "lodgify-global"
+  }
+}
