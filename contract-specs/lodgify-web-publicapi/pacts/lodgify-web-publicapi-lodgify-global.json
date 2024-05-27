@@ -36,6 +36,36 @@
       "type": "Synchronous/HTTP"
     },
     {
+      "description": "A request for an image file",
+      "pending": false,
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/image/b59337ac-4017-45a3-903b-69206f68fee2"
+      },
+      "response": {
+        "body": {
+          "content": {
+            "dateCreated": "2023-01-03T22:44:05",
+            "dateModified": "2023-01-03T22:44:05",
+            "height": 100,
+            "id": "b59337ac-4017-45a3-903b-69206f68fee2",
+            "size": 2420448,
+            "type": "Jpeg",
+            "width": 100
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "status": 200
+      },
+      "type": "Synchronous/HTTP"
+    },
+    {
       "description": "A request for country name",
       "pending": false,
       "request": {
@@ -49,6 +79,38 @@
             "language": "en",
             "name": "Burkina Faso"
           },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "status": 200
+      },
+      "type": "Synchronous/HTTP"
+    },
+    {
+      "description": "A request for list of currencies",
+      "pending": false,
+      "request": {
+        "method": "GET",
+        "path": "/api/v2/currency"
+      },
+      "response": {
+        "body": {
+          "content": [
+            {
+              "code": "USD",
+              "decimalPlaces": 2,
+              "euroForex": 1.0865,
+              "id": 50,
+              "name": "US dollar",
+              "obsolete": false,
+              "symbol": "$  "
+            }
+          ],
           "contentType": "application/json",
           "encoded": false
         },
