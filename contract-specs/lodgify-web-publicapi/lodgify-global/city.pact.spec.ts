@@ -3,7 +3,7 @@
  */
 
 import { PactV4 } from "@pact-foundation/pact";
-import { like, number } from "@pact-foundation/pact/src/v3/matchers";
+import { like } from "@pact-foundation/pact/src/v3/matchers";
 import path from "path";
 
 const pact = new PactV4({
