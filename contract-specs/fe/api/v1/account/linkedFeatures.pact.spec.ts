@@ -3,6 +3,7 @@
  */
 
 import { PactV4 } from "@pact-foundation/pact";
+import { like } from "@pact-foundation/pact/src/v3/matchers";
 import path from "path";
 
 const pact = new PactV4({
@@ -21,7 +22,7 @@ describe("Pact Lodgify Consumer", () => {
         .withRequest("GET", "/api/v1/account/linkedFeatures")
         .willRespondWith(200, (builder) => {
           builder.jsonBody({
-            accountId: 466151,
+            accountId: like(466151),
             features: [],
           });
         })

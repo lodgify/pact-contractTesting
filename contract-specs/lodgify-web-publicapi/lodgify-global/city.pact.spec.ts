@@ -3,6 +3,7 @@
  */
 
 import { PactV4 } from "@pact-foundation/pact";
+import { like, number } from "@pact-foundation/pact/src/v3/matchers";
 import path from "path";
 
 const pact = new PactV4({
@@ -20,19 +21,22 @@ describe("Pact Lodgify Consumer", () => {
       await pact
         .addInteraction()
         .uponReceiving("A request for a city")
+        .given("state", { property_owner_id: 466151 })
         .withRequest("GET", "/api/v1/city/222")
         .willRespondWith(200, (builder) => {
-          builder.jsonBody({
-            id: 222,
-            countryId: 107,
-            regionId: 2005,
-            name: "Chandār",
-            latitude: 32.2666667,
-            longitude: 49.0833333,
-            isCountryCapital: false,
-            isRegionCapital: false,
-            population: 0,
-          });
+          builder.jsonBody(
+            like({
+              id: 222,
+              countryId: 107,
+              regionId: 2005,
+              name: "Chandār",
+              latitude: 32.2666667,
+              longitude: 49.0833333,
+              isCountryCapital: false,
+              isRegionCapital: false,
+              population: 0,
+            })
+          );
         })
         .executeTest((mockServer) => {
           return fetch(`${mockServer.url}/api/v1/city/222`).then((res) =>

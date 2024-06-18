@@ -32,6 +32,19 @@
             "application/json"
           ]
         },
+        "matchingRules": {
+          "body": {
+            "$.accountId": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "status": {}
+        },
         "status": 200
       },
       "type": "Synchronous/HTTP"

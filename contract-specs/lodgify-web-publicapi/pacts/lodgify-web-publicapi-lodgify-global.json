@@ -92,6 +92,53 @@
       "type": "Synchronous/HTTP"
     },
     {
+      "description": "A request for country name",
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "state",
+          "params": {
+            "property_owner_id": 466151
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/country-name/22/en"
+      },
+      "response": {
+        "body": {
+          "content": {
+            "countryId": 22,
+            "language": "en",
+            "name": "Burkina Faso"
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "status": {}
+        },
+        "status": 200
+      },
+      "type": "Synchronous/HTTP"
+    },
+    {
       "description": "A request for list of currencies",
       "pending": false,
       "request": {
