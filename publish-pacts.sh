@@ -10,4 +10,4 @@ docker run --rm \
   pactfoundation/pact-cli:latest \
   publish \
   ${PWD}/contract-specs/lodgify-web-publicapi/pacts \
-  --consumer-app-version 1.0.3 \
+  --consumer-app-version 1.0.5 \

@@ -36,6 +36,59 @@
       "type": "Synchronous/HTTP"
     },
     {
+      "description": "A request for a city",
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "state",
+          "params": {
+            "property_owner_id": 466151
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/city/222"
+      },
+      "response": {
+        "body": {
+          "content": {
+            "countryId": 107,
+            "id": 222,
+            "isCountryCapital": false,
+            "isRegionCapital": false,
+            "latitude": 32.2666667,
+            "longitude": 49.0833333,
+            "name": "Chandār",
+            "population": 0,
+            "regionId": 2005
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "status": {}
+        },
+        "status": 200
+      },
+      "type": "Synchronous/HTTP"
+    },
+    {
       "description": "A request for an image file",
       "pending": false,
       "request": {
@@ -92,6 +145,53 @@
       "type": "Synchronous/HTTP"
     },
     {
+      "description": "A request for country name",
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "state",
+          "params": {
+            "property_owner_id": 466151
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/country-name/22/en"
+      },
+      "response": {
+        "body": {
+          "content": {
+            "countryId": 22,
+            "language": "en",
+            "name": "Burkina Faso"
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "status": {}
+        },
+        "status": 200
+      },
+      "type": "Synchronous/HTTP"
+    },
+    {
       "description": "A request for list of currencies",
       "pending": false,
       "request": {
@@ -118,6 +218,59 @@
           "Content-Type": [
             "application/json"
           ]
+        },
+        "status": 200
+      },
+      "type": "Synchronous/HTTP"
+    },
+    {
+      "description": "A request for list of currencies",
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "state",
+          "params": {
+            "property_owner_id": 466151
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/api/v2/currency"
+      },
+      "response": {
+        "body": {
+          "content": [
+            {
+              "code": "USD",
+              "decimalPlaces": 2,
+              "euroForex": 1.0865,
+              "id": 50,
+              "name": "US dollar",
+              "obsolete": false,
+              "symbol": "$  "
+            }
+          ],
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "status": {}
         },
         "status": 200
       },
